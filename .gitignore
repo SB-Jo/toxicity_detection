@@ -1,0 +1,4 @@
+input/*.tsv
+models/*.pth
+/__pycache__
+/detect/__pycache__
