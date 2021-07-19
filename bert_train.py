@@ -122,15 +122,14 @@ def main(config):
         '#warmup_iters =', n_warmup_steps,
     )
 
-    # Get pretrained model with specified softmax layer.
+
     model = DistilBertForSequenceClassification.from_pretrained(
         config.pretrained_model_name,
         num_labels=len(index_to_target)
     )
     optimizer = get_optimizer(model, config)
 
-    # By default, model returns a hidden representation before softmax func.
-    # Thus, we need to use CrossEntropyLoss, which combines LogSoftmax and NLLLoss.
+
     crit = nn.CrossEntropyLoss()
     scheduler = get_linear_schedule_with_warmup(
         optimizer,
