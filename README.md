@@ -1,3 +1,5 @@
+프로젝트 설명 블로그 : https://www.notion.so/USE-WEAK-TOXIC-6e2254aed4884e909800b1b89fffa2c4
+
 Dataset 설명
 
 - tok : tokenization
